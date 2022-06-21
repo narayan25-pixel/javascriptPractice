@@ -1,0 +1,6 @@
+var string='acb'
+if (string[0]==string[2]){
+    console.log("sandwichstring")
+} else{
+    console.log("its not a sandwitch string")
+}
