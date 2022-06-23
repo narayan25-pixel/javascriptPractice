@@ -1,0 +1,37 @@
+<!-- var name = window. prompt("Enter your name: "); alert("Your name is " + name); -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter your billunit</label><br>
+    <input id="inputbillamount" type="text">
+    <input type="button" id="submitButton" value="Submit" onclick="billunitCalculation()">
+    <p id="billUnit"></p>
+    <script>
+        // var billUnit = window. prompt("Enter your bill unit: "); 
+        // var billUnit=document.getElementById("inputbillamount").value;
+        
+        function billunitCalculation(){
+            var billUnit=document.getElementById("inputbillamount").value;
+            // alert("Your bill amount is " + billUnit);
+            if (billUnit<=80) {
+            billUnit=billUnit*1
+        } else if (billUnit<=160) {
+            billUnit=80*1 + (billUnit-80)*2;
+        } else {
+            billUnit=80*1 + 80*2 + (billUnit-160)*4
+        }
+        document.getElementById("billUnit").innerHTML="Your bill Amount is:" + billUnit;
+        console.log(billUnit)
+        
+        }
+        // alert("Your bill amount is " + billUnit);
+        
+    </script>
+</body>
+</html>
