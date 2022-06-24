@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="feverInput">Your temparature to check if u got fever or not</label>
+    <br>
+    <input type="text" id="feverInput"><br>
+    <button onclick="checkFever()">Submit</button><br>
+    <p id="output"></p>
+    <script>
+        function checkFever(){
+            const temparature = document.getElementById("feverInput").value;
+            if(temparature>=37.5){
+                document.getElementById("output").innerHTML="you got Fever"
+            }else{
+                document.getElementById("output").innerHTML="you do not have Fever"
+            }
+        }
+    </script>
+</body>
+</html>

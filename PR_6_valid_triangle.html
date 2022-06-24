@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="triangleSides">Enter your Triangle Sides</label><br>
+    <label for="firstSide">First Side</label>
+    <input type="text" id="firstSide"><br>
+
+    <label for="secondSide">Second Side</label>
+    <input type="text" id="secondSide"><br>
+
+    <label for="thirdSide">Third Side</label>
+    <input type="text" id="thirdSide"><br>
+
+    <button onclick="ValidTriangle()">Submit</button>
+
+    <p id="output"></p>
+
+    <script>
+        function ValidTriangle(){
+            const firstSide = document.getElementById("firstSide");
+            const secondSide = document.getElementById("secondSide");
+            const thirdSide = document.getElementById("thirdSide")
+            if(firstSide < secondSide + thirdSide || secondSide < firstSide + thirdSide || thirdSide < firstSide + secondSide){
+                document.getElementById("output").innerHTML="It is a valid Triangle"
+            } else{
+                document.getElementById("output").innerHTML="It is not a valid Triangle"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="seasonCheck">Enter your month to check the season</label>
+    <input type="text" id="month">
+    <button onclick="seasonCheck()">Submit</button>
+    <p id="output"></p>
+    <script>
+        function seasonCheck(){
+            var month= document.getElementById("month").value;
+            console.log(month)
+            if (month == 'Nov' || month== 'Dec' || month== 'Jan' || month== 'Feb'){
+                document.getElementById("output").innerHTML="it is Winter"
+            }else{
+                document.getElementById("output").innerHTML="it is Summer"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Largest and Smalaest among numbers</h1>
+    <label for="firstNumebr">Enter the value of firstNumebr</label><br>
+    <input type="text" id="firstNumebr"><br>
+
+    <label for="secondNumebr">Enter the value of secondNumebr</label><br>
+    <input type="text" id="secondNumebr"><br>
+
+    <label for="thirdNumebr">Enter the value of thirdNumebr</label><br>
+    <input type="text" id="thirdNumebr"><br>
+
+    <label for="fourthNumebr">Enter the value of fourthNumebr</label><br>
+    <input type="text" id="fourthNumebr"><br>
+
+    <label for="fifthNumebr">Enter the value of fifthNumebr</label><br>
+    <input type="text" id="fifthNumebr"><br>
+
+    <button onclick="largestAndSmallest()">Submit</button>
+    <p id="largest"></p>
+    <p id="smallest"></p>
+
+    <script>
+        function largestAndSmallest(){
+            const firstNumber = parseInt(document.getElementById("firstNumebr").value);
+            const secondNumber = parseInt(document.getElementById("secondNumebr").value);
+            const thirdNumber = parseInt(document.getElementById("thirdNumebr").value);
+            const fourthNumber = parseInt(document.getElementById("fourthNumebr").value);
+            const fifthNumber = parseInt(document.getElementById("fifthNumebr").value);
+
+            let numberArray = [secondNumber,thirdNumber,fourthNumber,fifthNumber]
+            let maxNumber = firstNumber;
+            let smallestNumber = firstNumber;
+            for (let item of numberArray){
+                if(maxNumber < item){
+                    maxNumber = item;
+                }
+            }
+            document.getElementById("largest").innerHTML= " Largest Number is :" + maxNumber;
+
+            for(let item of numberArray){
+                if(smallestNumber > item){
+                    smallestNumber = item;
+                }
+
+            }
+            document.getElementById("smallest").innerHTML= " smallest number is :" + smallestNumber
+        }
+    </script>
+</body>
+</html>

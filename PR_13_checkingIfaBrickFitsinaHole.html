@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Choose a Hole to fit the Brick numbers</h1>
+    <label for="width">Enter the width of the Hole</label><br>
+    <input type="text" id="width"><br>
+
+    <label for="height">Enter the height of the hole</label><br>
+    <input type="text" id="height"><br>
+
+    <label for="heightBrick">Enter the height of the brick</label><br>
+    <input type="text" id="heightBrick"><br>
+
+    <label for="widthBrick">Enter the width of the brick</label><br>
+    <input type="text" id="widthBrick"><br>
+
+    <label for="lenghthBrick">Enter the length of the brick</label><br>
+    <input type="text" id="lenghthBrick"><br>
+
+    <button onclick="brickFitCheck()">Submit</button>
+    <p id="output"></p>
+
+    <script>
+        function brickFitCheck(){
+            const width = parseInt(document.getElementById("width").value);
+            const height = parseInt(document.getElementById("height").value);
+            const heightBrick = parseInt(document.getElementById("heightBrick").value);
+            const widthBrick = parseInt(document.getElementById("widthBrick").value);
+            const lenghthBrick = parseInt(document.getElementById("lenghthBrick").value);
+            const holeVolume = width * width * height;
+            const brickVolume= lenghthBrick * heightBrick * widthBrick;
+            if (holeVolume >= brickVolume){
+                document.getElementById("output").innerHTML="Brick will Fit"
+            } else {
+                document.getElementById("output").innerHTML="Brick will not Fit"
+            }
+
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>To find the given number is Odd or even and Positive or Negative</h1>
+    <label for="oddEven">Enter a number to check if it is Even or Odd and Positive or negative</label>
+    <input type="text" id="oddEven">
+    <button onclick="checkEvenOddPositiveNegative()">submit</button>
+    <p id="oddEvenOutput"></p>
+    <p id="positiveNegativeOutput"></p>
+
+    <script>
+        function checkEvenOddPositiveNegative(){
+            const inputNumber = document.getElementById("oddEven").value;
+            if (inputNumber%2 == 0){
+                document.getElementById("oddEvenOutput").innerHTML="Entered number is Even"
+            } else{
+                document.getElementById("oddEvenOutput").innerHTML="Entered number is odd"
+            }
+            if( inputNumber > 0 ){
+                document.getElementById("positiveNegativeOutput").innerHTML="Entered number is positive"
+            } else{
+                document.getElementById("positiveNegativeOutput").innerHTML="Entered number is negative" 
+            }
+        }
+    </script>
+</body>
+</html>

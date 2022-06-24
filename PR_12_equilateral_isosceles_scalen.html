@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Largest and Smalaest among numbers</h1>
+    <label for="firstSide">Enter the length of firstSide</label><br>
+    <input type="text" id="firstSide"><br>
+
+    <label for="secondSide">Enter the length of secondSide</label><br>
+    <input type="text" id="secondSide"><br>
+
+    <label for="thirdSide">Enter the value of thirdSide</label><br>
+    <input type="text" id="thirdSide"><br>
+
+    <button onclick="triangleValidation()">Submit</button>
+    <p id="triangleOutput"></p>
+    <script>
+        function triangleValidation(){
+            var firstSide = parseInt(document.getElementById("firstSide").value)
+            var secondSide = parseInt(document.getElementById("secondSide").value);
+            var thirdSide = parseInt(document.getElementById("thirdSide").value);
+            if( firstSide == secondSide  && secondSide == thirdSide){
+                document.getElementById("triangleOutput").innerHTML="It is a Equilateral triangle"
+            } else if( firstSide == secondSide && firstSide != thirdSide || firstSide == thirdSide && firstSide != secondSide || secondSide == thirdSide && secondSide != firstSide){
+                document.getElementById("triangleOutput").innerHTML="It is a Isoceles triangle" 
+            } else{
+                document.getElementById("triangleOutput").innerHTML="It is a Scalen triangle"
+            }
+
+        } 
+    </script>
+</body>
+</html>

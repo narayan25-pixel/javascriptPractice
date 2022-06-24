@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Enter the values to check if you are in Profit or Loss</h1>
+    <label for="buyInput"> Enetr your Buy Price</label>
+    <input type="text" id="buyPrice"><br>
+
+    <label for="sellInput"> Enetr your Sell Price</label>
+    <input type="text" id="sellPrice"> <br>
+
+    <button onclick="profitLossCheck()">submit</button>
+
+    <p id="output"></p>
+
+    <script>
+        function profitLossCheck(){
+            const buyPrice = parseInt(document.getElementById("buyPrice").value);
+            const sellPrice = parseInt(document.getElementById("sellPrice").value);
+            if(buyPrice>sellPrice){
+                document.getElementById("output").innerHTML = "You are in Loss"
+            } else if(sellPrice>buyPrice){
+                document.getElementById("output").innerHTML = "You are in Profit"
+            } else{
+                document.getElementById("output").innerHTML = "You are in Cost to Cost"
+            }
+        }
+    </script>
+</body>
+</html>

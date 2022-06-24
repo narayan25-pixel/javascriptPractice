@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter your CTC to check the in hand salary</h1>
+    <label for="salary"> Please Enter your ctc in lakhs</label><br>
+    <input type="text" id="ctc"><br>
+    <br>
+    <button onclick="inHandSalary()">Submit</button>
+    <p id="output"></p>
+
+    <script>
+        function inHandSalary(){
+            const ctc = parseInt(document.getElementById("ctc").value);
+            if(ctc <= 500000){
+                document.getElementById("output").innerHTML = "your in hand salary per month is :  " + ctc;
+            } else if( ctc >= 500000 && ctc <= 1000000){
+                document.getElementById("output").innerHTML = "your in hand salary per month is :  " + ctc*90/100;
+            } else if (ctc >= 1000000 && ctc <= 1400000){
+                document.getElementById("output").innerHTML = "your in hand salary per month is :  " + ctc*85/100; 
+            } else {
+                document.getElementById("output").innerHTML = "your in hand salary per month is :  " + ctc*70/100;
+            }
+        }
+    </script>
+
+</body>
+</html>
